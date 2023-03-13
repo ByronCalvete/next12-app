@@ -4,7 +4,7 @@ const About = () => {
   return (
     <PageLayout title='Next 12 - About'>
       <div>
-        <h1>This in an about page</h1>
+        <h1>This is an about page</h1>
       </div>
       <style jsx>
         {`

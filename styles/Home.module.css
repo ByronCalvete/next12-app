@@ -1,6 +1,3 @@
 .container {
   padding: 0 2rem;
-  display: grid;
-  place-content: center;
-  height: 100vh;
 }
