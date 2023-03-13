@@ -20,8 +20,19 @@ export default function Home({ articles }) {
     </PageLayout>
   )
 }
+// With getServerSideProps -> to N request, this excuted N times. Use this when the page has a lot of dynamic data or MUCH live data
+// export async function getServerSideProps () {
+//   const response = await fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb2b802370794172bc11d1933d6d8f00')
+//   const { articles } = await response.json()
+//   return {
+//     props: {
+//       articles
+//     }
+//   }
+// }
 
-export async function getServerSideProps () {
+// With getStaticProps -> to N request, this executed 1 time at build time (or when I refresh the page)
+export async function getStaticProps () {
   const response = await fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb2b802370794172bc11d1933d6d8f00')
   const { articles } = await response.json()
   return {
